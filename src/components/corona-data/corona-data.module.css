@@ -1,0 +1,56 @@
+.overall_container {
+  /* width: auto; */
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
+}
+
+.overall_confirmed {
+  flex-grow: 1;
+  border-radius: 20px;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  /* height: 300px; */
+  text-align: center;
+  margin: 0 5px;
+  font-size: 2em;
+  background: #c5cae9;
+  color: #f44336;
+}
+
+.overall_recover {
+  flex-grow: 1;
+  border-radius: 20px;
+  font-size: 2em;
+  text-align: center;
+  background: #c5cae9;
+  color: #087f23;
+}
+
+.overall_death {
+  flex-grow: 1;
+  border-radius: 20px;
+  text-align: center;
+  margin: 0 5px;
+  font-size: 2em;
+  background: #c5cae9;
+}
+
+.virus_icon {
+  font-size: 10rem;
+}
+
+.recovered_icon {
+  font-size: 10rem;
+}
+
+.death_icon {
+  font-size: 10rem;
+}
