@@ -1,12 +1,12 @@
 import React from 'react';
-import CoronaData from './components/corona-data/corona-data';
+import KorCoronaData from './components/kor-corona-data/kor-corona-data';
 import Header from './components/header/header';
 
 function App() {
   return (
     <>
       <Header />
-      <CoronaData />
+      <KorCoronaData />
     </>
   );
 }
