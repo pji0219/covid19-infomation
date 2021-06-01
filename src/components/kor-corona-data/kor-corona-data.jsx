@@ -117,8 +117,8 @@ function KorCoronaData() {
             borderColor: '#087f23',
             fill: false,
             data: recoveredData,
-          }
-        ]
+          },
+        ],
       });
 
       // 월별 사망자 추이
@@ -130,15 +130,15 @@ function KorCoronaData() {
             borderColor: '#321911',
             fill: false,
             data: deathData,
-          }
-        ]
-      })
+          },
+        ],
+      });
     };
   }, []);
 
   return (
     <>
-      <h1>국내 코로나 종합 현황</h1>
+      <h2>국내 코로나 종합 현황</h2>
       <Charts
         overallConfirm={overallConfirm}
         overallActive={overallActive}
