@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './kor-corona-data.module.css';
 import Charts from '../charts/charts';
+import Header from '../header/header';
 
 function KorCoronaData() {
   // 종합 state
@@ -138,6 +139,7 @@ function KorCoronaData() {
 
   return (
     <>
+      <Header />
       <h2>국내 코로나 종합 현황</h2>
       <Charts
         overallConfirm={overallConfirm}

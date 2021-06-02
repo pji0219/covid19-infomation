@@ -10,9 +10,8 @@ function Charts({
   confirmedData,
   monthActive,
   monthRecovered,
-  monthDeath
+  monthDeath,
 }) {
-  
   return (
     <section>
       <div className={styles.overall_container}>
@@ -45,30 +44,27 @@ function Charts({
         <div className={styles.confirmed_chart}>
           <Bar
             data={confirmedData}
-            option={
-              {
-                plugin: {
-                  title: {
-                    display: true,
-                    position: 'top',
-                    text: '국내 누적 확진자 추이',
-                    fontSize: 16
-                  },
-                  legend: {
-                    dsiplay: true,
-                    position: 'bottom'
-                  }
-                }
-              }
-            }
+            option={{
+              plugin: {
+                title: {
+                  display: true,
+                  position: 'top',
+                  text: '국내 누적 확진자 추이',
+                  fontSize: 16,
+                },
+                legend: {
+                  dsiplay: true,
+                  position: 'bottom',
+                },
+              },
+            }}
           />
         </div>
         <div className={styles.active_chart}>
           <Line
             data={monthActive}
-            options={
-              {
-               plugin: {
+            options={{
+              plugin: {
                 title: {
                   display: true,
                   position: 'top',
@@ -77,20 +73,17 @@ function Charts({
                 },
                 legend: {
                   display: true,
-                  position: 'bottom'
-                }
-               }
-              }
-            }
-            height={225}
+                  position: 'bottom',
+                },
+              },
+            }}
           />
         </div>
         <div className={styles.recovered_chart}>
           <Line
             data={monthRecovered}
-            options={
-              {
-               plugin: {
+            options={{
+              plugin: {
                 title: {
                   display: true,
                   positon: 'top',
@@ -99,20 +92,17 @@ function Charts({
                 },
                 legend: {
                   display: true,
-                  position: 'bottom'
-                }
-               }
-              }
-            }
-            height={285}
+                  position: 'bottom',
+                },
+              },
+            }}
           />
         </div>
         <div className={styles.death_chart}>
           <Line
             data={monthDeath}
-            options={
-              {
-               plugin: {
+            options={{
+              plugin: {
                 title: {
                   display: true,
                   position: 'top',
@@ -121,12 +111,10 @@ function Charts({
                 },
                 legend: {
                   display: true,
-                  position: 'bottom'
-                }
-               }
-              }
-            }
-            height={320}
+                  position: 'bottom',
+                },
+              },
+            }}
           />
         </div>
       </div>

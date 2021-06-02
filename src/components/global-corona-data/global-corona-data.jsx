@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import GlobalCharts from '../charts/global-charts';
+import Header from '../header/header';
 
 function GlobalCoronaData() {
   // 세계 종합 state
@@ -64,7 +65,7 @@ function GlobalCoronaData() {
 
       // 미국 종합 현황
       const usa = us[us.length - 1];
-      setUsconfirmedData(usa.Confirmed);
+      setUsConfirmedData(usa.Confirmed);
       setUsActiveData(usa.Active);
       setUsRecoveredData(usa.Recovered);
       setUsDeathData(usa.Deaths);
@@ -74,16 +75,40 @@ function GlobalCoronaData() {
       setJpConfirmedData(japan.Confirmed);
       setJpActiveData(japan.Active);
       setJpRecoveredData(japan.Recovered);
-      seetJpDeathData(japan.Deaths);
+      setJpDeathData(japan.Deaths);
 
       // 중국 종합 현황
       const china = cn[cn.length - 1];
       setCnConfirmedData(china.Confirmed);
       setCnActiveData(china.Active);
+      setCnRecoveredData(china.Recovered);
+      setCnDeathData(china.Deaths);
     };
   }, []);
 
-  return <GlobalCharts />;
+  return (
+    <>
+      <Header />
+      <GlobalCharts
+        globalConfirmedData={globalConfirmedData}
+        globalActiveData={globalActiveData}
+        globalRecoveredData={globalRecoveredData}
+        globalDeathData={globalDeathData}
+        usConfirmedData={usConfirmedData}
+        usActiveData={usActiveData}
+        usRecoveredData={usRecoveredData}
+        usDeathData={usDeathData}
+        jpConfirmedData={jpConfirmedData}
+        jpActiveData={jpActiveData}
+        jpRecoveredData={jpRecoveredData}
+        jpDeathData={jpDeathData}
+        cnConfirmedData={cnConfirmedData}
+        cnActiveData={cnActiveData}
+        cnRecoveredData={cnRecoveredData}
+        cnDeathData={cnDeathData}
+      />
+    </>
+  );
 }
 
 export default GlobalCoronaData;

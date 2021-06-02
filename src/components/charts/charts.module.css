@@ -59,7 +59,7 @@
   font-size: 10rem;
 }
 
-.charts_container {
+/* .charts_container {
   display: flex;
   height: 300px;
 }
@@ -82,4 +82,10 @@
 .death_chart {
   margin-top: 20px;
   flex-grow: 1;
+} */
+
+.charts_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
 }
