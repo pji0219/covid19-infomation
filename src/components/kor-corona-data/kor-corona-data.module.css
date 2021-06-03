@@ -1,4 +1,9 @@
-h1 {
-  text-align: center;
-  margin: 0;
+.title {
+  margin-left: 20px;
+  margin-bottom: 0;
+}
+
+.description {
+  margin-top: 0;
+  margin-left: 20px;
 }

@@ -9,20 +9,22 @@
   flex-grow: 1;
   border-radius: 20px;
   text-align: center;
-  margin: 0 5px;
+  margin: 0 20px;
   font-size: 2em;
   background: #c5cae9;
   color: #f44336;
+  box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
 .overall_active {
   flex-grow: 1;
   border-radius: 20px;
   text-align: center;
-  margin-right: 5px;
+  margin-right: 20px;
   font-size: 2em;
   background: #c5cae9;
   color: #ffd600;
+  box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
 .overall_recover {
@@ -32,15 +34,17 @@
   text-align: center;
   background: #c5cae9;
   color: #087f23;
+  box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
 .overall_death {
   flex-grow: 1;
   border-radius: 20px;
   text-align: center;
-  margin: 0 5px;
+  margin: 0 20px;
   font-size: 2em;
   background: #c5cae9;
+  box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
 .virus_icon {
@@ -59,33 +63,36 @@
   font-size: 10rem;
 }
 
-/* .charts_container {
-  display: flex;
-  height: 300px;
-}
-
-.confirmed_chart {
-  margin-top: 20px;
-  flex-grow: 1;
-}
-
-.active_chart {
-  margin-top: 20px;
-  flex-grow: 1;
-}
-
-.recovered_chart {
-  margin-top: 20px;
-  flex-grow: 1;
-}
-
-.death_chart {
-  margin-top: 20px;
-  flex-grow: 1;
-} */
-
 .charts_container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 2rem;
+}
+
+.confirmed_chart {
+  background: #c5cae9;
+  box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  margin-left: 20px;
+}
+
+.active_chart {
+  background: #c5cae9;
+  box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  margin-right: 20px;
+}
+
+.recovered_chart {
+  background: #c5cae9;
+  box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  margin-left: 20px;
+}
+
+.death_chart {
+  background: #c5cae9;
+  box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  margin-right: 20px;
 }
