@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import GlobalCharts from '../charts/global-charts';
-import Header from '../header/header';
+import styles from './global-corona-data.module.css';
 
 function GlobalCoronaData() {
   // 세계 종합 state
@@ -88,7 +88,11 @@ function GlobalCoronaData() {
 
   return (
     <>
-      <Header />
+      <h3 className={styles.title}>해외 코로나 종합 현황</h3>
+      <p className={styles.description}>
+        전세계 종합 코로나 현황과 주변국들의 코로나 종합 현황을 보여 줍니다.
+        (단위: 명)
+      </p>
       <GlobalCharts
         globalConfirmedData={globalConfirmedData}
         globalActiveData={globalActiveData}

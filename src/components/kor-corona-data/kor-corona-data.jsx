@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import styles from './kor-corona-data.module.css';
 import Charts from '../charts/charts';
-import Header from '../header/header';
 
 function KorCoronaData() {
   // 종합 state
@@ -139,8 +138,7 @@ function KorCoronaData() {
 
   return (
     <>
-      <Header />
-      <h2 className={styles.title}>국내 코로나 종합 현황</h2>
+      <h3 className={styles.title}>국내 코로나 종합 현황</h3>
       <p className={styles.description}>
         국내 코로나 현황과 각종 차트들을 보여 줍니다. (단위: 명)
       </p>

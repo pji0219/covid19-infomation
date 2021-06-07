@@ -3,10 +3,30 @@
   height: 150px;
   display: flex;
   align-items: center;
-  padding: 0 1em;
+  padding: 0 16px;
 }
 
 .title {
   color: #fff;
   font-size: 2em;
+  margin-right: 20px;
+}
+
+.korea {
+  font-size: 1.25em;
+  margin-right: 10px;
+}
+
+.global {
+  font-size: 1.25em;
+  margin-right: 10px;
+}
+
+.news {
+  font-size: 1.25em;
+  margin-right: 10px;
+}
+
+.data {
+  font-size: 1.25em;
 }
