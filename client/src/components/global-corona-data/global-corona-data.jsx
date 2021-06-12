@@ -4,6 +4,9 @@ import GlobalCharts from '../charts/global-charts';
 import styles from './global-corona-data.module.css';
 
 function GlobalCoronaData() {
+  // loading state
+  const [isLoading, setIsLoading] = useState(true);
+
   // 세계 종합 state
   const [globalConfirmedData, setGlobalConfirmedData] = useState();
   const [globalActiveData, setGlobalActiveData] = useState();
@@ -29,35 +32,43 @@ function GlobalCoronaData() {
   const [cnDeathData, setCnDeathData] = useState();
 
   useEffect(() => {
-    // main
-    const fatchData = async () => {
-      const global = await axios
-        .get('https://api.covid19api.com/summary')
-        .catch((err) => console.log(err));
-
-      const us = await axios
-        .get('https://api.covid19api.com/total/dayone/country/us')
-        .catch((err) => console.log(err));
-
-      const jp = await axios
-        .get('https://api.covid19api.com/total/dayone/country/jp')
-        .catch((err) => console.log(err));
-
-      const cn = await axios
-        .get('https://api.covid19api.com/total/dayone/country/cn')
-        .catch((err) => console.log(err));
-
-      makeData(global.data.Global, us.data, jp.data, cn.data);
+    // 해외 api
+    const fetchGlobal = () => {
+      return axios.get('/api/global');
     };
-    fatchData();
+
+    // 미국 api
+    const fetchUs = () => {
+      return axios.get('https://api.covid19api.com/total/dayone/country/us');
+    };
+
+    // 일본 api
+    const fetchJp = () => {
+      return axios.get('https://api.covid19api.com/total/dayone/country/jp');
+    };
+
+    // 중국 api
+    const fetchCn = () => {
+      return axios.get('https://api.covid19api.com/total/dayone/country/cn');
+    };
+
+    // 다중 api 호출
+    axios
+      .all([fetchGlobal(), fetchUs(), fetchJp(), fetchCn()])
+      .then(
+        axios.spread((global, us, jp, cn) => {
+          makeData(global.data.Global, us.data, jp.data, cn.data);
+          setIsLoading(false);
+        })
+      )
+      .catch((err) => console.log('에러 발생! (o_0;)', err));
 
     // 데이터 가공
     const makeData = (global, us, jp, cn) => {
       // 세계 종합 현황
       const globalActive =
         Number(global.TotalConfirmed) -
-        Number(global.TotalRecovered) -
-        Number(global.TotalDeaths);
+        (Number(global.TotalRecovered) + Number(global.TotalDeaths));
       setGlobalConfirmedData(global.TotalConfirmed);
       setGlobalActiveData(globalActive);
       setGlobalRecoveredData(global.TotalRecovered);
@@ -88,29 +99,30 @@ function GlobalCoronaData() {
 
   return (
     <>
-      <h3 className={styles.title}>해외 코로나 종합 현황</h3>
-      <p className={styles.description}>
-        전세계 종합 코로나 현황과 주변국들의 코로나 종합 현황을 보여 줍니다.
-        (단위: 명)
-      </p>
-      <GlobalCharts
-        globalConfirmedData={globalConfirmedData}
-        globalActiveData={globalActiveData}
-        globalRecoveredData={globalRecoveredData}
-        globalDeathData={globalDeathData}
-        usConfirmedData={usConfirmedData}
-        usActiveData={usActiveData}
-        usRecoveredData={usRecoveredData}
-        usDeathData={usDeathData}
-        jpConfirmedData={jpConfirmedData}
-        jpActiveData={jpActiveData}
-        jpRecoveredData={jpRecoveredData}
-        jpDeathData={jpDeathData}
-        cnConfirmedData={cnConfirmedData}
-        cnActiveData={cnActiveData}
-        cnRecoveredData={cnRecoveredData}
-        cnDeathData={cnDeathData}
-      />
+      {isLoading ? (
+        <div className={styles.loading_spiner}>
+          <span>loading...</span>
+        </div>
+      ) : (
+        <GlobalCharts
+          globalConfirmedData={globalConfirmedData}
+          globalActiveData={globalActiveData}
+          globalRecoveredData={globalRecoveredData}
+          globalDeathData={globalDeathData}
+          usConfirmedData={usConfirmedData}
+          usActiveData={usActiveData}
+          usRecoveredData={usRecoveredData}
+          usDeathData={usDeathData}
+          jpConfirmedData={jpConfirmedData}
+          jpActiveData={jpActiveData}
+          jpRecoveredData={jpRecoveredData}
+          jpDeathData={jpDeathData}
+          cnConfirmedData={cnConfirmedData}
+          cnActiveData={cnActiveData}
+          cnRecoveredData={cnRecoveredData}
+          cnDeathData={cnDeathData}
+        />
+      )}
     </>
   );
 }
