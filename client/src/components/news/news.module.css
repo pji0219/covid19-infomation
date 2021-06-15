@@ -10,11 +10,12 @@
   transform: translateY(-2px);
 }
 
-a {
+.news__title {
+  font-size: 1.25em;
   color: black;
   text-decoration: none;
 }
 
-a:hover {
+.news__title:hover {
   color: blueviolet;
 }

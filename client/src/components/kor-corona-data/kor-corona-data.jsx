@@ -73,10 +73,15 @@ function KorCoronaData() {
       }, []);
       // 가장 최근 종합 정보를 얻기 위한 마지막 인덱스
       const newest = arr[arr.length - 1];
-      setOverallConfirm(newest.confirmed);
-      setOverallActive(newest.active);
-      setOverallRecover(newest.recovered);
-      setOverallDeath(newest.death);
+      // 숫자에 3자리수마다 , 구분
+      const confirmed = Number(newest.confirmed).toLocaleString();
+      const active = Number(newest.active).toLocaleString();
+      const recovered = Number(newest.recovered).toLocaleString();
+      const death = Number(newest.death).toLocaleString();
+      setOverallConfirm(confirmed);
+      setOverallActive(active);
+      setOverallRecover(recovered);
+      setOverallDeath(death);
 
       const labels = arr.map((item) => `${item.year}.${item.month + 1}`);
       const confirmedData = arr.map((item) => item.confirmed);

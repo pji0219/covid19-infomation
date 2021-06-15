@@ -67,7 +67,7 @@ function NewsData() {
       ) : (
         <>
           <p className={styles.description}>
-            코로나 관련 기사들을 보여 줍니다.(최신순 10개)
+            코로나 관련 기사들을 보여 줍니다. (최신순 10개)
           </p>
           <ul className={styles.news_container}>
             {news.map((item) => (

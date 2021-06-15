@@ -9,7 +9,7 @@
 .title {
   color: #fff;
   font-size: 2em;
-  margin-right: 20px;
+  margin-right: 25px;
 }
 
 .korea {
@@ -29,4 +29,17 @@
 
 .data {
   font-size: 1.25em;
+}
+
+.link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: gray;
+}
+
+.selected {
+  color: black;
 }

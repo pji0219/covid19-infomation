@@ -1,13 +1,16 @@
 import React from 'react';
 import styles from './header.module.css';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function Header() {
-  const navStyle = {
-    color: 'black',
-    textDecoration: 'none',
-    textDecorationColor: 'black',
-  };
+  // const navStyle = {
+  //   color: '#fff',
+  //   textDecoration: 'none',
+  // };
+
+  // const activeStyle = {
+  //   color: 'black',
+  // };
 
   return (
     <header className={styles.header}>
@@ -16,32 +19,41 @@ function Header() {
         코로나 알고가!
       </span>
       <div className={styles.korea}>
-        <button>
-          <Link to="/" style={navStyle}>
-            국내 현황
-          </Link>
-        </button>
+        <NavLink
+          to="/"
+          exact
+          className={styles.link}
+          activeClassName={styles.selected}
+        >
+          국내 현황
+        </NavLink>
       </div>
       <div className={styles.global}>
-        <button>
-          <Link to="/global" style={navStyle}>
-            해외 현황
-          </Link>
-        </button>
+        <NavLink
+          to="/global"
+          className={styles.link}
+          activeClassName={styles.selected}
+        >
+          해외 현황
+        </NavLink>
       </div>
       <div className={styles.news}>
-        <button>
-          <Link to="/news" style={navStyle}>
-            관련 뉴스
-          </Link>
-        </button>
+        <NavLink
+          to="/news"
+          className={styles.link}
+          activeClassName={styles.selected}
+        >
+          관련 뉴스
+        </NavLink>
       </div>
       <div className={styles.data}>
-        <button>
-          <Link to="/source" style={navStyle}>
-            데이터 출처
-          </Link>
-        </button>
+        <NavLink
+          to="/source"
+          className={styles.link}
+          activeClassName={styles.selected}
+        >
+          데이터 출처
+        </NavLink>
       </div>
     </header>
   );
