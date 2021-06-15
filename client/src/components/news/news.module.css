@@ -1,0 +1,20 @@
+.news {
+  background: #c5cae9;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.news:hover {
+  transform: translateY(-2px);
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: blueviolet;
+}

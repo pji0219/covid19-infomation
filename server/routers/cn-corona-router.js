@@ -7,3 +7,12 @@ const options = {
   url: 'https://api.covid19api.com/total/dayone/country/cn'
 }
 
+//중국 코로나 api 라우터
+router.get('/', (req, res) => {
+  request(options, (error, response, body) => {
+    if (error) throw new Error(error);
+    res.send(body);
+  });
+});
+
+module.exports = router;

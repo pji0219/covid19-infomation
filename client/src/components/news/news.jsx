@@ -1,18 +1,17 @@
-import React, {useEffect} from 'react';
-import axios from 'axios';
+import React from 'react';
+import styles from './news.module.css';
 
-function News() {
-  useEffect(() => {
-    axios
-      .get('/api/news')
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err));
-  }, []);
-
+function News({ title, description, link, pubDate }) {
   return (
-    <div>
-      <h1>news</h1>
-    </div>
+    <li className={styles.news}>
+      <h5 className={styles.news__title}>
+        <a href={link} title={title} target="blank">
+          {title} 👈click
+        </a>
+      </h5>
+      <p className={styles.news__description}>{description}</p>
+      <p className={styles.news__date}>{pubDate}</p>
+    </li>
   );
 }
 

@@ -39,17 +39,17 @@ function GlobalCoronaData() {
 
     // 미국 api
     const fetchUs = () => {
-      return axios.get('https://api.covid19api.com/total/dayone/country/us');
+      return axios.get('/api/usa');
     };
 
     // 일본 api
     const fetchJp = () => {
-      return axios.get('https://api.covid19api.com/total/dayone/country/jp');
+      return axios.get('/api/jp');
     };
 
     // 중국 api
     const fetchCn = () => {
-      return axios.get('https://api.covid19api.com/total/dayone/country/cn');
+      return axios.get('/api/cn');
     };
 
     // 다중 api 호출
