@@ -1,13 +1,12 @@
 .news {
-  background: #c5cae9;
-  margin-left: 20px;
-  margin-right: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-bottom: 10px;
-  box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.2);
+  border-bottom: 2px solid gray;
 }
 
 .news:hover {
-  transform: translateY(-2px);
+  transform: translateY(-4px);
 }
 
 .news__title {

@@ -6,8 +6,10 @@
 }
 
 .card {
+  margin-top: 20px;
   width: 300px;
   text-align: center;
   background: #c5cae9;
   border-radius: 20px;
+  color: red;
 }

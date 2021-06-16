@@ -2,8 +2,13 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import styles from './kor-corona-data.module.css';
 import Charts from '../charts/charts';
+import Err from '../error/err';
+import LoadingSpinner from '../loading-spinner/loading-spinner';
 
 function KorCoronaData() {
+  // 에러 여부 state
+  const [isNormal, setIsNormal] = useState(true);
+
   // loading state
   const [isLoading, setIsLoading] = useState(true);
 
@@ -32,7 +37,10 @@ function KorCoronaData() {
         makeData(res.data);
         setIsLoading(false);
       })
-      .catch((err) => console.log('에러 발생! (o_0;)', err));
+      .catch((err) => {
+        setIsNormal(false);
+        console.log('에러 발생! (o_0;)', err);
+      });
 
     const makeData = (data) => {
       // API로 받은 데이터를 가공 ( 월별 누적 확진자 데이터로 )
@@ -145,27 +153,31 @@ function KorCoronaData() {
 
   return (
     <>
-      {isLoading ? (
-        <div className={styles.loading_spiner}>
-          <span>loading...</span>
-        </div>
-      ) : (
+      {isNormal ? (
         <>
-          <h3 className={styles.title}>국내 코로나 종합 현황</h3>
-          <p className={styles.description}>
-            국내 코로나 현황과 각종 차트들을 보여 줍니다. (단위: 명)
-          </p>
-          <Charts
-            overallConfirm={overallConfirm}
-            overallActive={overallActive}
-            overallRecover={overallRecover}
-            overallDeath={overallDeath}
-            confirmedData={confirmedData}
-            monthActive={monthActive}
-            monthRecovered={monthRecovered}
-            monthDeath={monthDeath}
-          />
+          {isLoading ? (
+            <LoadingSpinner />
+          ) : (
+            <>
+              <h3 className={styles.title}>국내 코로나 종합 현황</h3>
+              <p className={styles.description}>
+                국내 코로나 현황과 각종 차트들을 보여 줍니다. (단위: 명)
+              </p>
+              <Charts
+                overallConfirm={overallConfirm}
+                overallActive={overallActive}
+                overallRecover={overallRecover}
+                overallDeath={overallDeath}
+                confirmedData={confirmedData}
+                monthActive={monthActive}
+                monthRecovered={monthRecovered}
+                monthDeath={monthDeath}
+              />
+            </>
+          )}
         </>
+      ) : (
+        <Err />
       )}
     </>
   );

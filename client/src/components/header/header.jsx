@@ -3,15 +3,6 @@ import styles from './header.module.css';
 import { NavLink } from 'react-router-dom';
 
 function Header() {
-  // const navStyle = {
-  //   color: '#fff',
-  //   textDecoration: 'none',
-  // };
-
-  // const activeStyle = {
-  //   color: 'black',
-  // };
-
   return (
     <header className={styles.header}>
       <span className={styles.title}>

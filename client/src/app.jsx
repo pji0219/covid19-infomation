@@ -6,7 +6,7 @@ import NewsData from './components/news-data/news-data';
 import DataSource from './components/data-source/data-source';
 import Header from './components/header/header';
 import NotFound from './components/not-found/not-found';
-import Err from './components/error/err';
+import Footer from './components/footer/footer';
 
 function App() {
   return (
@@ -18,9 +18,9 @@ function App() {
           <Route path="/global" component={GlobalCoronaData} />
           <Route path="/news" component={NewsData} />
           <Route path="/source" component={DataSource} />
-          <Route path="/err" component={Err} />
           <Route to="/404" component={NotFound} />
         </Switch>
+        <Footer />
       </BrowserRouter>
     </>
   );

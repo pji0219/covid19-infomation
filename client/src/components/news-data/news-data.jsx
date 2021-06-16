@@ -3,8 +3,11 @@ import axios from 'axios';
 import moment from 'moment';
 import News from '../news/news';
 import styles from './news-data.module.css';
+import LoadingSpinner from '../loading-spinner/loading-spinner';
+import Err from '../error/err';
 
 function NewsData() {
+  const [isNormal, setIsNormal] = useState(true);
   const [isloading, setIsLoading] = useState(true);
   const [news, setNews] = useState();
 
@@ -15,7 +18,10 @@ function NewsData() {
         makeData(res.data.items);
         setIsLoading(false);
       })
-      .catch((err) => console.log('에러 발생! (o_0;)', err));
+      .catch((err) => {
+        setIsNormal(false);
+        console.log('에러 발생! (o_0;)', err);
+      });
 
     // 데이터 가공
     const makeData = (data) => {
@@ -59,30 +65,34 @@ function NewsData() {
   }, []);
 
   return (
-    <section>
-      {isloading ? (
-        <div className="loading_spiner">
-          <span className="loader">loading</span>
-        </div>
-      ) : (
+    <>
+      {isNormal ? (
         <>
-          <p className={styles.description}>
-            코로나 관련 기사들을 보여 줍니다. (최신순 10개)
-          </p>
-          <ul className={styles.news_container}>
-            {news.map((item) => (
-              <News
-                key={item.id}
-                title={item.newTitle}
-                description={item.newDesc}
-                link={item.DataLink}
-                pubDate={item.newDate}
-              />
-            ))}
-          </ul>
+          {isloading ? (
+            <LoadingSpinner />
+          ) : (
+            <>
+              <p className={styles.description}>
+                코로나 관련 기사들을 보여 줍니다. (최신순 10개)
+              </p>
+              <ul className={styles.news_container}>
+                {news.map((item) => (
+                  <News
+                    key={item.id}
+                    title={item.newTitle}
+                    description={item.newDesc}
+                    link={item.DataLink}
+                    pubDate={item.newDate}
+                  />
+                ))}
+              </ul>
+            </>
+          )}
         </>
+      ) : (
+        <Err />
       )}
-    </section>
+    </>
   );
 }
 

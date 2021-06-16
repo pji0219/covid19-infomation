@@ -1,0 +1,20 @@
+.footer {
+  background: #3b5998;
+  margin-top: 10px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 16px;
+  box-shadow: 0px -6px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.message {
+  font-size: 1em;
+  color: #fff;
+}
+
+.programmer {
+  font-size: 1em;
+  color: #fff;
+}
