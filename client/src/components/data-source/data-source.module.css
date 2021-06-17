@@ -1,0 +1,24 @@
+.container {
+  padding-left: 20px;
+  height: 680px;
+}
+
+.title {
+  margin-top: 20px;
+}
+
+.corona_api_title {
+  margin-top: 20px;
+}
+
+.naver_news_title {
+  margin-top: 10px;
+}
+
+.data_chart_title {
+  margin-top: 10px;
+}
+
+.icon_title {
+  margin-top: 10px;
+}

@@ -3,10 +3,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 700px;
 }
 
 .card {
-  margin-top: 20px;
   width: 300px;
   text-align: center;
   background: #c5cae9;

@@ -75,17 +75,19 @@ function NewsData() {
               <p className={styles.description}>
                 코로나 관련 기사들을 보여 줍니다. (최신순 10개)
               </p>
-              <ul className={styles.news_container}>
-                {news.map((item) => (
-                  <News
-                    key={item.id}
-                    title={item.newTitle}
-                    description={item.newDesc}
-                    link={item.DataLink}
-                    pubDate={item.newDate}
-                  />
-                ))}
-              </ul>
+              <div className={styles.container}>
+                <ul className={styles.news_container}>
+                  {news.map((item) => (
+                    <News
+                      key={item.id}
+                      title={item.newTitle}
+                      description={item.newDesc}
+                      link={item.DataLink}
+                      pubDate={item.newDate}
+                    />
+                  ))}
+                </ul>
+              </div>
             </>
           )}
         </>

@@ -1,12 +1,7 @@
 .news {
   padding-left: 20px;
   padding-right: 20px;
-  margin-bottom: 10px;
-  border-bottom: 2px solid gray;
-}
-
-.news:hover {
-  transform: translateY(-4px);
+  border-bottom: 1px solid gray;
 }
 
 .news__title {

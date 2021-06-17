@@ -9,43 +9,39 @@ function Header() {
         <i class="fas fa-virus"></i>
         코로나 알고가!
       </span>
-      <div className={styles.korea}>
-        <NavLink
-          to="/"
-          exact
-          className={styles.link}
-          activeClassName={styles.selected}
-        >
-          국내 현황
-        </NavLink>
-      </div>
-      <div className={styles.global}>
-        <NavLink
-          to="/global"
-          className={styles.link}
-          activeClassName={styles.selected}
-        >
-          해외 현황
-        </NavLink>
-      </div>
-      <div className={styles.news}>
-        <NavLink
-          to="/news"
-          className={styles.link}
-          activeClassName={styles.selected}
-        >
-          관련 뉴스
-        </NavLink>
-      </div>
-      <div className={styles.data}>
-        <NavLink
-          to="/source"
-          className={styles.link}
-          activeClassName={styles.selected}
-        >
-          데이터 출처
-        </NavLink>
-      </div>
+      <NavLink
+        to="/"
+        exact
+        className={styles.korea}
+        activeClassName={styles.selected}
+      >
+        <i class="fas fa-chart-line"></i>
+        국내 현황
+      </NavLink>
+      <NavLink
+        to="/global"
+        className={styles.global}
+        activeClassName={styles.selected}
+      >
+        <i class="fas fa-globe-asia"></i>
+        해외 현황
+      </NavLink>
+      <NavLink
+        to="/news"
+        className={styles.news}
+        activeClassName={styles.selected}
+      >
+        <i class="far fa-newspaper"></i>
+        관련 뉴스
+      </NavLink>
+      <NavLink
+        to="/source"
+        className={styles.data}
+        activeClassName={styles.selected}
+      >
+        <i class="fas fa-server"></i>
+        데이터 출처
+      </NavLink>
     </header>
   );
 }

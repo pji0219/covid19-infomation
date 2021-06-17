@@ -23,7 +23,7 @@
   margin-right: 20px;
   font-size: 2em;
   background: #c5cae9;
-  color: #ffd600;
+  color: #ef6c00;
   box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -48,19 +48,19 @@
 }
 
 .overall_confirmed:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
 }
 
 .overall_active:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
 }
 
 .overall_recover:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
 }
 
 .overall_death:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
 }
 
 .virus_icon {
@@ -115,17 +115,17 @@
 }
 
 .confirmed_chart:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
 }
 
 .active_chart:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
 }
 
 .recovered_chart:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
 }
 
 .death_chart:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
 }

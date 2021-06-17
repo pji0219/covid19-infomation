@@ -10,34 +10,49 @@
 .title {
   color: #fff;
   font-size: 2em;
-  margin-right: 25px;
+  margin-right: 40px;
 }
 
 .korea {
+  color: #fff;
+  text-decoration: none;
   font-size: 1.25em;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .global {
+  color: #fff;
+  text-decoration: none;
   font-size: 1.25em;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .news {
+  color: #fff;
+  text-decoration: none;
   font-size: 1.25em;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .data {
+  color: #fff;
+  text-decoration: none;
   font-size: 1.25em;
 }
 
-.link {
-  color: #fff;
-  text-decoration: none;
+.korea:hover {
+  color: gray;
 }
 
-.link:hover {
+.global:hover {
+  color: gray;
+}
+
+.news:hover {
+  color: gray;
+}
+
+.data:hover {
   color: gray;
 }
 

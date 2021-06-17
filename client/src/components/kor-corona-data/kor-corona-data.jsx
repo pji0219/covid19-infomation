@@ -116,7 +116,7 @@ function KorCoronaData() {
         datasets: [
           {
             label: '월별 격리자 추이',
-            borderColor: '#ffd600',
+            borderColor: '#ef6c00',
             fill: false,
             data: activeData,
           },
