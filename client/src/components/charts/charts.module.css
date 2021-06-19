@@ -129,3 +129,123 @@
 .death_chart:hover {
   transform: translateY(-6px);
 }
+
+
+@media all and (max-width: 768px) {
+  .overall_container {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .overall_confirmed {
+    text-align: center;
+    margin: 10px;
+    font-size: 2em;
+    background: #c5cae9;
+    color: #f44336;
+    box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.2);
+    width: auto;
+    height: 288px;
+  } 
+
+  .overall_active {
+    text-align: center;
+    margin: 10px;
+    font-size: 2em;
+    background: #c5cae9;
+    color: #ef6c00;
+    box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.2);
+    width: auto;
+    height: 288px;
+  }
+
+  .overall_recover {
+    border-radius: 20px;
+    margin: 10px;
+    font-size: 2em;
+    text-align: center;
+    background: #c5cae9;
+    color: #087f23;
+    box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    width: auto;
+    height: 288px;
+  }
+
+  .overall_death {
+    border-radius: 20px;
+    text-align: center;
+    font-size: 2em;
+    background: #c5cae9;
+    box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    width: auto;
+    height: 288px;
+  }
+
+  .virus_icon {
+    font-size: 10rem;
+  }
+
+  .active_icon {
+    font-size: 10rem;
+  }
+
+  .recovered_icon {
+    font-size: 10rem;
+  }
+
+  .death_icon {
+   font-size: 10rem;
+  }
+
+  .charts_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    height: auto;
+    margin: 0, 0, 10px;
+  }
+
+  .confirmed_chart {
+    background: #c5cae9;
+    box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    width: 95%;
+    height: auto;
+    margin: 0, 0, 10px;
+  }
+
+  .active_chart {
+    background: #c5cae9;
+    box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    width: 95%;
+    height: auto;
+    margin: 0, 0, 10px;
+  }
+
+  .recovered_chart {
+    background: #c5cae9;
+    box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    width: 95%;
+    height: auto;
+    margin: 0, 0, 10px;
+  }
+
+  .death_chart {
+    background: #c5cae9;
+    box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    width: 95%;
+    height: auto;
+    margin: 0, 0, 10px;
+  }
+}
