@@ -17,6 +17,7 @@ function NewsData() {
       .then((res) => {
         makeData(res.data.items);
         setIsLoading(false);
+        console.log(res.data.items);
       })
       .catch((err) => {
         setIsNormal(false);
@@ -26,9 +27,6 @@ function NewsData() {
     // 데이터 가공
     const makeData = (data) => {
       const arr = data.reduce((acc, cur) => {
-        // id
-        let i = 0;
-
         // 제목의 특정 문자를 다른 것으로 대체
         const removeWord = /[<b>|</b>|&qout|amp|lt|gt;]/g;
         const dataTitle = cur.title;
@@ -50,7 +48,6 @@ function NewsData() {
         const DataLink = cur.link;
 
         acc.push({
-          id: i++,
           newTitle,
           newDesc,
           newDate,
@@ -79,7 +76,6 @@ function NewsData() {
                 <ul className={styles.news_container}>
                   {news.map((item) => (
                     <News
-                      key={item.id}
                       title={item.newTitle}
                       description={item.newDesc}
                       link={item.DataLink}

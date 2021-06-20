@@ -1,68 +1,71 @@
-/* desktop */ 
-.header {
-  background: #3b5998;
-  height: 150px;
-  display: flex;
-  align-items: center;
-  padding: 0 16px;
-  box-shadow: 0px 6px 5px 0px rgba(0, 0, 0, 0.2);
+/* 데스크탑 */
+@media all and (min-width: 1025px) {
+  .header {
+    background: #3b5998;
+    width: auto;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    box-shadow: 0px 6px 5px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  .title {
+    color: #fff;
+    font-size: 2em;
+    margin-right: 40px;
+  }
+
+  .korea {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.25em;
+    margin-right: 20px;
+  }
+
+  .global {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.25em;
+    margin-right: 20px;
+  }
+
+  .news {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.25em;
+    margin-right: 20px;
+  }
+
+  .data {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.25em;
+  }
+
+  .korea:hover {
+    color: gray;
+  }
+
+  .global:hover {
+    color: gray;
+  }
+
+  .news:hover {
+    color: gray;
+  }
+
+  .data:hover {
+    color: gray;
+  }
+
+  .selected {
+    color: black;
+  }
 }
 
-.title {
-  color: #fff;
-  font-size: 2em;
-  margin-right: 40px;
-}
-
-.korea {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.25em;
-  margin-right: 20px;
-}
-
-.global {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.25em;
-  margin-right: 20px;
-}
-
-.news {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.25em;
-  margin-right: 20px;
-}
-
-.data {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.25em;
-}
-
-.korea:hover {
-  color: gray;
-}
-
-.global:hover {
-  color: gray;
-}
-
-.news:hover {
-  color: gray;
-}
-
-.data:hover {
-  color: gray;
-}
-
-.selected {
-  color: black;
-}
-
-/* middle */
-@media all and (max-width: 845px) {
+/* 중간 */
+@media all and (max-width: 1024px) {
   .header {
     background: #3b5998;
     width: auto;
@@ -95,7 +98,7 @@
   }
 
   .news {
-   color: #fff;
+    color: #fff;
     text-decoration: none;
     font-size: 1em;
     margin-right: 20px;
@@ -160,7 +163,7 @@
   }
 
   .news {
-   color: #fff;
+    color: #fff;
     text-decoration: none;
     font-size: 0.9em;
     margin-right: 20px;
@@ -193,7 +196,7 @@
   }
 }
 
-/* small */
+/* 스몰 */
 @media all and (max-width: 620px) {
   .header {
     background: #3b5998;
@@ -227,7 +230,7 @@
   }
 
   .news {
-   color: #fff;
+    color: #fff;
     text-decoration: none;
     font-size: 0.8em;
     margin-right: 20px;

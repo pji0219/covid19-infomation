@@ -1,67 +1,213 @@
-.footer {
-  background: #3b5998;
-  margin-top: 20px;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  padding: 0 16px;
-  box-shadow: 0px -6px 5px 0px rgba(0, 0, 0, 0.2);
+/* 데스크탑 */
+@media all and (min-width: 1025px) {
+  .footer {
+    background: #3b5998;
+    margin-top: 20px;
+    width: auto;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    box-shadow: 0px -6px 5px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  .message {
+    font-size: 1em;
+    color: #fff;
+  }
+
+  .programmer {
+    font-size: 1em;
+    color: #fff;
+  }
+
+  .korea {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.25em;
+    margin-right: 20px;
+  }
+
+  .global {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.25em;
+    margin-right: 20px;
+  }
+
+  .news {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.25em;
+    margin-right: 20px;
+  }
+
+  .data {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.25em;
+    margin-right: 280px;
+  }
+
+  .korea:hover {
+    color: gray;
+  }
+
+  .global:hover {
+    color: gray;
+  }
+
+  .news:hover {
+    color: gray;
+  }
+
+  .data:hover {
+    color: gray;
+  }
+
+  .selected {
+    color: black;
+  }
 }
 
-.message {
-  font-size: 1em;
-  color: #fff;
+/* 중간 */
+@media all and (max-width: 1024px) {
+  .footer {
+    background: #3b5998;
+    margin-top: 20px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    box-shadow: 0px -6px 5px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  .message {
+    font-size: 10px;
+    color: #fff;
+  }
+
+  .programmer {
+    font-size: 10px;
+    color: #fff;
+  }
+
+  .korea {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    margin-right: 20px;
+  }
+
+  .global {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    margin-right: 20px;
+  }
+
+  .news {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    margin-right: 20px;
+  }
+
+  .data {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    margin-right: 20px;
+  }
+
+  .korea:hover {
+    color: gray;
+  }
+
+  .global:hover {
+    color: gray;
+  }
+
+  .news:hover {
+    color: gray;
+  }
+
+  .data:hover {
+    color: gray;
+  }
+
+  .selected {
+    color: black;
+  }
 }
 
-.programmer {
-  font-size: 1em;
-  color: #fff;
-}
+/* 스몰 */
+@media all and (max-width: 680px) {
+  .footer {
+    background: #3b5998;
+    margin-top: 20px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    box-shadow: 0px -6px 5px 0px rgba(0, 0, 0, 0.2);
+  }
 
-.korea {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.25em;
-  margin-right: 20px;
-}
+  .message {
+    font-size: 10px;
+    color: #fff;
+  }
 
-.global {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.25em;
-  margin-right: 20px;
-}
+  .programmer {
+    font-size: 10px;
+    color: #fff;
+  }
 
-.news {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.25em;
-  margin-right: 20px;
-}
+  .korea {
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    margin-right: 20px;
+  }
 
-.data {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.25em;
-  margin-right: 280px;
-}
+  .global {
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    margin-right: 20px;
+  }
 
-.korea:hover {
-  color: gray;
-}
+  .news {
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    margin-right: 20px;
+  }
 
-.global:hover {
-  color: gray;
-}
+  .data {
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    margin-right: 20px;
+  }
 
-.news:hover {
-  color: gray;
-}
+  .korea:hover {
+    color: gray;
+  }
 
-.data:hover {
-  color: gray;
-}
+  .global:hover {
+    color: gray;
+  }
 
-.selected {
-  color: black;
+  .news:hover {
+    color: gray;
+  }
+
+  .data:hover {
+    color: gray;
+  }
+
+  .selected {
+    color: black;
+  }
 }

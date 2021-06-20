@@ -87,7 +87,7 @@ function Charts({
                 title: {
                   display: true,
                   positon: 'top',
-                  text: '국내 월별 격리 해제자 추이',
+                  text: '국내 격리 해제자 추이',
                   fontSize: 16,
                 },
                 legend: {
@@ -106,7 +106,7 @@ function Charts({
                 title: {
                   display: true,
                   position: 'top',
-                  text: '국내 월별 사망자 추이',
+                  text: '국내 사망자 추이',
                   fontSize: 16,
                 },
                 legend: {

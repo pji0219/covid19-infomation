@@ -128,7 +128,7 @@ function KorCoronaData() {
         labels,
         datasets: [
           {
-            label: '월별 격리 해제자 추이',
+            label: '누적 격리 해제자 추이',
             borderColor: '#087f23',
             fill: false,
             data: recoveredData,
@@ -141,7 +141,7 @@ function KorCoronaData() {
         labels,
         datasets: [
           {
-            label: '월별 사망자 추이',
+            label: '누적 사망자 추이',
             borderColor: '#321911',
             fill: false,
             data: deathData,

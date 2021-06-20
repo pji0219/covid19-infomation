@@ -23,7 +23,7 @@ function DataSource() {
             title="코로나 API"
             target="blank"
           >
-            https://documenter.getpostman.com/view/10808728/SzS8rjbc
+            링크
           </a>
           <h4 className={styles.naver_news_title}>네이버 뉴스 API</h4>
           <a
@@ -31,7 +31,7 @@ function DataSource() {
             title="네이버 뉴스 API"
             target="blank"
           >
-            https://developers.naver.com/docs/serviceapi/search/news/news.md#%EB%89%B4%EC%8A%A4
+            링크
           </a>
           <h4 className={styles.data_chart_title}>
             차트 라이브러리(react-chartjs-2)
@@ -41,11 +41,11 @@ function DataSource() {
             title="차트 라이브러리"
             target="blank"
           >
-            https://www.npmjs.com/package/react-chartjs-2
+            링크
           </a>
           <h4 className={styles.icon_title}>아이콘(fontawesome)</h4>
           <a href="https://fontawesome.com/" title="아이콘" target="blank">
-            https://fontawesome.com/
+            링크
           </a>
         </section>
       )}
