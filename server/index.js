@@ -11,7 +11,7 @@ const news = require('./routers/news-router');
 
 // cors 해결
 app.use(cors({
-  origin: ['http://localhost:3000']
+  origin: ['https://know-corona-info.netlify.app']
 }));
 
 // 국내 종합 코로나 정보 api
