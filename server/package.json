@@ -1,13 +1,13 @@
 {
-  "name": "covid19-info",
+  "name": "server",
   "version": "1.0.0",
   "description": "corona info API server",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cd server && node index.js",
-    "client": "cd client && yarn start",
-    "backend": "cd server && nodemon index.js",
+    "start": "node index.js",
+    "client": "cd .. && cd client && yarn start",
+    "backend": "nodemon index.js",
     "dev": "concurrently \"yarn backend\" \"yarn client\""
   },
   "author": "pji",
@@ -16,8 +16,8 @@
     "axios": "^0.21.1",
     "concurrently": "^6.2.0",
     "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "http-proxy-middleware": "^2.0.0",
     "nodemon": "^2.0.7",
     "request": "^2.88.2"
   }

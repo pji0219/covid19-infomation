@@ -4,6 +4,7 @@ import styles from './kor-corona-data.module.css';
 import Charts from '../charts/charts';
 import Err from '../error/err';
 import LoadingSpinner from '../loading-spinner/loading-spinner';
+const url = process.env.REACT_APP_BASE_URL;
 
 function KorCoronaData() {
   // 에러 여부 state
@@ -32,7 +33,7 @@ function KorCoronaData() {
 
   useEffect(() => {
     axios
-      .get('/api/kor')
+      .get(`${url}/api/kor`)
       .then((res) => {
         makeData(res.data);
         setIsLoading(false);
@@ -158,7 +159,7 @@ function KorCoronaData() {
           {isLoading ? (
             <LoadingSpinner />
           ) : (
-            <>
+            <div className={styles.container}>
               <h3 className={styles.title}>국내 코로나 종합 현황</h3>
               <p className={styles.description}>
                 국내 코로나 현황과 각종 차트들을 보여 줍니다. (단위: 명)
@@ -173,7 +174,7 @@ function KorCoronaData() {
                 monthRecovered={monthRecovered}
                 monthDeath={monthDeath}
               />
-            </>
+            </div>
           )}
         </>
       ) : (

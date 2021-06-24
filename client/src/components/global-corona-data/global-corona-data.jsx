@@ -34,26 +34,27 @@ function GlobalCoronaData() {
   const [cnActiveData, setCnActiveData] = useState();
   const [cnRecoveredData, setCnRecoveredData] = useState();
   const [cnDeathData, setCnDeathData] = useState();
+  const url = process.env.REACT_APP_BASE_URL;
 
   useEffect(() => {
     // 해외 api
     const fetchGlobal = () => {
-      return axios.get('/api/global');
+      return axios.get(`${url}/api/global`);
     };
 
     // 미국 api
     const fetchUs = () => {
-      return axios.get('/api/usa');
+      return axios.get(`${url}/api/usa`);
     };
 
     // 일본 api
     const fetchJp = () => {
-      return axios.get('/api/jp');
+      return axios.get(`${url}/api/jp`);
     };
 
     // 중국 api
     const fetchCn = () => {
-      return axios.get('/api/cn');
+      return axios.get(`${url}/api/cn`);
     };
 
     // 다중 api 호출
@@ -67,7 +68,7 @@ function GlobalCoronaData() {
       )
       .catch((err) => {
         setIsNormal(false);
-        console.log('에러 발생! (o_0;)', err)
+        console.log('에러 발생! (o_0;)', err);
       });
 
     // 데이터 가공
@@ -126,33 +127,35 @@ function GlobalCoronaData() {
   return (
     <>
       {isNormal ? (
-          <>
-            {isLoading ? (
-              <LoadingSpinner />
-            ) : (
-              <>
-                <p className={styles.desc}>해외 코로나 현황과 주변국 코로나 현황을 보여 줍니다. (단위: 명)</p>
-                <GlobalCharts
-                  globalConfirmedData={globalConfirmedData}
-                  globalActiveData={globalActiveData}
-                  globalRecoveredData={globalRecoveredData}
-                  globalDeathData={globalDeathData}
-                  usConfirmedData={usConfirmedData}
-                  usActiveData={usActiveData}
-                  usRecoveredData={usRecoveredData}
-                  usDeathData={usDeathData}
-                  jpConfirmedData={jpConfirmedData}
-                  jpActiveData={jpActiveData}
-                  jpRecoveredData={jpRecoveredData}
-                  jpDeathData={jpDeathData}
-                  cnConfirmedData={cnConfirmedData}
-                  cnActiveData={cnActiveData}
-                  cnRecoveredData={cnRecoveredData}
-                  cnDeathData={cnDeathData}
-                />
-              </>
-            )}
-          </>
+        <>
+          {isLoading ? (
+            <LoadingSpinner />
+          ) : (
+            <>
+              <p className={styles.desc}>
+                해외 코로나 현황과 주변국 코로나 현황을 보여 줍니다. (단위: 명)
+              </p>
+              <GlobalCharts
+                globalConfirmedData={globalConfirmedData}
+                globalActiveData={globalActiveData}
+                globalRecoveredData={globalRecoveredData}
+                globalDeathData={globalDeathData}
+                usConfirmedData={usConfirmedData}
+                usActiveData={usActiveData}
+                usRecoveredData={usRecoveredData}
+                usDeathData={usDeathData}
+                jpConfirmedData={jpConfirmedData}
+                jpActiveData={jpActiveData}
+                jpRecoveredData={jpRecoveredData}
+                jpDeathData={jpDeathData}
+                cnConfirmedData={cnConfirmedData}
+                cnActiveData={cnActiveData}
+                cnRecoveredData={cnRecoveredData}
+                cnDeathData={cnDeathData}
+              />
+            </>
+          )}
+        </>
       ) : (
         <Err />
       )}

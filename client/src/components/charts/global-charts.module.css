@@ -50,22 +50,6 @@
     box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.2);
   }
 
-  .global_overall_confirmed:hover {
-    transform: translateY(-6px);
-  }
-
-  .global_overall_active:hover {
-    transform: translateY(-6px);
-  }
-
-  .global_overall_recovered:hover {
-    transform: translateY(-6px);
-  }
-
-  .global_overall_death:hover {
-    transform: translateY(-6px);
-  }
-
   .usa_overall_container {
     height: 300px;
     display: flex;
@@ -114,22 +98,6 @@
     font-size: 2em;
     background: #c5cae9;
     box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.2);
-  }
-
-  .usa_overall_confirmed:hover {
-    transform: translateY(-6px);
-  }
-
-  .usa_overall_active:hover {
-    transform: translateY(-6px);
-  }
-
-  .usa_overall_recovered:hover {
-    transform: translateY(-6px);
-  }
-
-  .usa_overall_death:hover {
-    transform: translateY(-6px);
   }
 
   .jp_overall_container {
@@ -182,22 +150,6 @@
     box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.2);
   }
 
-  .jp_overall_confirmed:hover {
-    transform: translateY(-6px);
-  }
-
-  .jp_overall_active:hover {
-    transform: translateY(-6px);
-  }
-
-  .jp_overall_recovered:hover {
-    transform: translateY(-6px);
-  }
-
-  .jp_overall_death:hover {
-    transform: translateY(-6px);
-  }
-
   .cn_overall_container {
     height: 300px;
     display: flex;
@@ -246,22 +198,6 @@
     font-size: 2em;
     background: #c5cae9;
     box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.2);
-  }
-
-  .cn_overall_confirmed:hover {
-    transform: translateY(-6px);
-  }
-
-  .cn_overall_active:hover {
-    transform: translateY(-6px);
-  }
-
-  .cn_overall_recovered:hover {
-    transform: translateY(-6px);
-  }
-
-  .cn_overall_death:hover {
-    transform: translateY(-6px);
   }
 
   .virus_icon {

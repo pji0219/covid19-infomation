@@ -5,6 +5,7 @@ import News from '../news/news';
 import styles from './news-data.module.css';
 import LoadingSpinner from '../loading-spinner/loading-spinner';
 import Err from '../error/err';
+const url = process.env.REACT_APP_BASE_URL;
 
 function NewsData() {
   const [isNormal, setIsNormal] = useState(true);
@@ -13,11 +14,10 @@ function NewsData() {
 
   useEffect(() => {
     axios
-      .get('/api/navernews')
+      .get(`${url}/api/navernews`)
       .then((res) => {
         makeData(res.data.items);
         setIsLoading(false);
-        console.log(res.data.items);
       })
       .catch((err) => {
         setIsNormal(false);
@@ -74,8 +74,9 @@ function NewsData() {
               </p>
               <div className={styles.container}>
                 <ul className={styles.news_container}>
-                  {news.map((item) => (
+                  {news.map((item, index) => (
                     <News
+                      key={index}
                       title={item.newTitle}
                       description={item.newDesc}
                       link={item.DataLink}

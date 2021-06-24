@@ -6,7 +6,7 @@ function Header() {
   return (
     <header className={styles.header}>
       <span className={styles.title}>
-        <i class="fas fa-virus"></i>
+        <i className="fas fa-virus"></i>
         코로나 알고가!
       </span>
       <NavLink
@@ -15,7 +15,7 @@ function Header() {
         className={styles.korea}
         activeClassName={styles.selected}
       >
-        <i class="fas fa-chart-line"></i>
+        <i className="fas fa-chart-line"></i>
         국내 현황
       </NavLink>
       <NavLink
@@ -23,7 +23,7 @@ function Header() {
         className={styles.global}
         activeClassName={styles.selected}
       >
-        <i class="fas fa-globe-asia"></i>
+        <i className="fas fa-globe-asia"></i>
         해외 현황
       </NavLink>
       <NavLink
@@ -31,7 +31,7 @@ function Header() {
         className={styles.news}
         activeClassName={styles.selected}
       >
-        <i class="far fa-newspaper"></i>
+        <i className="far fa-newspaper"></i>
         관련 뉴스
       </NavLink>
       <NavLink
@@ -39,7 +39,7 @@ function Header() {
         className={styles.data}
         activeClassName={styles.selected}
       >
-        <i class="fas fa-server"></i>
+        <i className="fas fa-server"></i>
         데이터 출처
       </NavLink>
     </header>

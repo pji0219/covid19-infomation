@@ -17,25 +17,25 @@ function Charts({
       <div className={styles.overall_container}>
         <span className={styles.overall_confirmed}>
           <div className={styles.virus_icon}>
-            <i class="fas fa-virus"></i>
+            <i className="fas fa-virus"></i>
           </div>
           확진: {overallConfirm}명
         </span>
         <span className={styles.overall_active}>
           <div className={styles.active_icon}>
-            <i class="fas fa-hospital"></i>
+            <i className="fas fa-hospital"></i>
           </div>
           격리: {overallActive}명
         </span>
         <span className={styles.overall_recover}>
           <div className={styles.recovered_icon}>
-            <i class="fas fa-virus-slash"></i>
+            <i className="fas fa-virus-slash"></i>
           </div>
           격리 해제: {overallRecover}명
         </span>
         <span className={styles.overall_death}>
           <div className={styles.death_icon}>
-            <i class="fas fa-skull-crossbones"></i>
+            <i className="fas fa-skull-crossbones"></i>
           </div>
           사망: {overallDeath}명
         </span>

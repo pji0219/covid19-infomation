@@ -17,7 +17,9 @@ function DataSource() {
         <section className={styles.container}>
           <h3 className={styles.title}>데이터 출처</h3>
           <p>이 사이트에서 사용된 데이터들의 출처 입니다.</p>
-          <h4 className={styles.corona_api_title}>국내 및 해외 코로나 API</h4>
+          <h4 className={styles.corona_api_title}>
+            국내 및 해외 코로나 통계 API
+          </h4>
           <a
             href="https://documenter.getpostman.com/view/10808728/SzS8rjbc"
             title="코로나 API"

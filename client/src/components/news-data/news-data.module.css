@@ -21,10 +21,6 @@
     height: auto;
     box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.2);
   }
-
-  .news_container:hover {
-    transform: translateY(-6px);
-  }
 }
 
 /* 태블릿 + 스마트폰 이하 */
@@ -46,9 +42,5 @@
     width: auto;
     height: auto;
     box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.2);
-  }
-
-  .news_container:hover {
-    transform: translateY(-6px);
   }
 }

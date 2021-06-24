@@ -10,7 +10,9 @@ const cnData = require('./routers/cn-corona-router');
 const news = require('./routers/news-router');
 
 // cors 해결
-app.use(cors());
+app.use(cors({
+  origin: ['http://localhost:3000']
+}));
 
 // 국내 종합 코로나 정보 api
 app.use('/api/kor', korData);
@@ -31,5 +33,5 @@ app.use('/api/cn', cnData);
 app.use('/api/navernews', news);
 
 app.listen(port, () => {
-  console.log(`app listening at http://localhost:${port}`);
+  console.log(`app listening at port ${port}`);
 });
