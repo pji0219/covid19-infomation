@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const port = 5000;
+const port = process.env.PORT || 5000;
 const korData = require('./routers/kor-corona-router');
 const globalData = require('./routers/global-corona-router');
 const usaData = require('./routers/usa-corona-router');
