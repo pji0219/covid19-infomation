@@ -8,10 +8,12 @@ const usaData = require('./routers/usa-corona-router');
 const jpData = require('./routers/jp-corona-router');
 const cnData = require('./routers/cn-corona-router');
 const news = require('./routers/news-router');
+const key = require('./config/key');
+require('dotenv').config();
 
 // cors 해결
 app.use(cors({
-  origin: ['https://know-corona-info.netlify.app']
+  origin: [`${key.CLIENT_URL}`]
 }));
 
 // 국내 종합 코로나 정보 api
