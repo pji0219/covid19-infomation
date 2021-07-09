@@ -5,10 +5,13 @@ function NotFound() {
   return (
     <section className={styles.not_found_container}>
       <div className={styles.card}>
-        <h1>404</h1>
+        <span className={styles.status_code}>404</span>
       </div>
-      <h1>페이지를 찾을 수 없습니다.</h1>
-      <h1>url을 올바르게 입력 하였는지 확인해 보시기 바랍니다.</h1>
+      <p className={styles.msg}>
+        페이지를 찾을 수 없습니다.
+        <br />
+        url을 올바르게 입력 하였는지 확인해 보시기 바랍니다.
+      </p>
     </section>
   );
 }

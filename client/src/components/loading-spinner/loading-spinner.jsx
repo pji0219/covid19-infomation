@@ -5,7 +5,7 @@ function LoadingSpinner() {
   return (
     <div className={styles.loading_spinner_container}>
       <div className={styles.loading_spinner}></div>
-      <h1 className={styles.loading_text}>Loading...</h1>
+      <span className={styles.loading_text}>Loading...</span>
     </div>
   );
 }

@@ -9,7 +9,7 @@ function Footer() {
         <br />
         의료진분들과 국민 여러분을 응원 합니다.
         <br />
-        <span className={styles.programmer}>개발자: 박종익</span>
+        개발자: 박종익
       </p>
     </footer>
   );

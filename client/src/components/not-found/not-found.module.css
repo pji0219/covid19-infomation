@@ -11,5 +11,13 @@
   text-align: center;
   background: #c5cae9;
   border-radius: 20px;
+}
+
+.status_code {
+  font-size: 32px;
   color: red;
+}
+
+.msg {
+  font-size: 32px;
 }

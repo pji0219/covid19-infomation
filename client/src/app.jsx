@@ -10,19 +10,17 @@ import Footer from './components/footer/footer';
 
 function App() {
   return (
-    <>
-      <BrowserRouter>
-        <Header />
-        <Switch>
-          <Route path="/" exact component={KorCoronaData} />
-          <Route path="/global" component={GlobalCoronaData} />
-          <Route path="/news" component={NewsData} />
-          <Route path="/source" component={DataSource} />
-          <Route to="/404" component={NotFound} />
-        </Switch>
-        <Footer />
-      </BrowserRouter>
-    </>
+    <BrowserRouter>
+      <Header />
+      <Switch>
+        <Route path="/" exact component={KorCoronaData} />
+        <Route path="/global" component={GlobalCoronaData} />
+        <Route path="/news" component={NewsData} />
+        <Route path="/source" component={DataSource} />
+        <Route to="/404" component={NotFound} />
+      </Switch>
+      <Footer />
+    </BrowserRouter>
   );
 }
 

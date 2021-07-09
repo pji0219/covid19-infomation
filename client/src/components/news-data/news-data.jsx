@@ -10,7 +10,7 @@ const url = process.env.REACT_APP_BASE_URL;
 function NewsData() {
   const [isNormal, setIsNormal] = useState(true);
   const [isloading, setIsLoading] = useState(true);
-  const [news, setNews] = useState();
+  const [news, setNews] = useState([]);
 
   useEffect(() => {
     axios

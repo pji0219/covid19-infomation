@@ -16,11 +16,6 @@
     font-size: 1em;
     color: #fff;
   }
-
-  .programmer {
-    font-size: 1em;
-    color: #fff;
-  }
 }
 
 /* 태블릿 + 스마트폰 이하 */
@@ -37,11 +32,6 @@
   }
 
   .message {
-    font-size: 14px;
-    color: #fff;
-  }
-
-  .programmer {
     font-size: 14px;
     color: #fff;
   }

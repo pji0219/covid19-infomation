@@ -14,22 +14,22 @@ function KorCoronaData() {
   const [isLoading, setIsLoading] = useState(true);
 
   // 종합 state
-  const [overallConfirm, setOverallConfirm] = useState();
-  const [overallActive, setOverallActive] = useState();
-  const [overallRecover, setOverallRecover] = useState();
-  const [overallDeath, setOverallDeath] = useState();
+  const [overallConfirm, setOverallConfirm] = useState([]);
+  const [overallActive, setOverallActive] = useState([]);
+  const [overallRecover, setOverallRecover] = useState([]);
+  const [overallDeath, setOverallDeath] = useState([]);
 
   // 누적 확진자 추이 state
-  const [confirmedData, setConfirmedData] = useState();
+  const [confirmedData, setConfirmedData] = useState([]);
 
   // 월별 격리자 state
-  const [monthActive, setMonthActive] = useState();
+  const [monthActive, setMonthActive] = useState([]);
 
   // 월별 격리 해제자 state
-  const [monthRecovered, setMonthRecovered] = useState();
+  const [monthRecovered, setMonthRecovered] = useState([]);
 
   // 월별 사망자 추이 state
-  const [monthDeath, setMonthDeath] = useState();
+  const [monthDeath, setMonthDeath] = useState([]);
 
   useEffect(() => {
     axios

@@ -12,28 +12,28 @@ function GlobalCoronaData() {
   const [isLoading, setIsLoading] = useState(true);
 
   // 세계 종합 state
-  const [globalConfirmedData, setGlobalConfirmedData] = useState();
-  const [globalActiveData, setGlobalActiveData] = useState();
-  const [globalRecoveredData, setGlobalRecoveredData] = useState();
-  const [globalDeathData, setGlobalDeathData] = useState();
+  const [globalConfirmedData, setGlobalConfirmedData] = useState([]);
+  const [globalActiveData, setGlobalActiveData] = useState([]);
+  const [globalRecoveredData, setGlobalRecoveredData] = useState([]);
+  const [globalDeathData, setGlobalDeathData] = useState([]);
 
   // 미국 종합 state
-  const [usConfirmedData, setUsConfirmedData] = useState();
-  const [usActiveData, setUsActiveData] = useState();
-  const [usRecoveredData, setUsRecoveredData] = useState();
-  const [usDeathData, setUsDeathData] = useState();
+  const [usConfirmedData, setUsConfirmedData] = useState([]);
+  const [usActiveData, setUsActiveData] = useState([]);
+  const [usRecoveredData, setUsRecoveredData] = useState([]);
+  const [usDeathData, setUsDeathData] = useState([]);
 
   // 일본 종합 state
-  const [jpConfirmedData, setJpConfirmedData] = useState();
-  const [jpActiveData, setJpActiveData] = useState();
-  const [jpRecoveredData, setJpRecoveredData] = useState();
-  const [jpDeathData, setJpDeathData] = useState();
+  const [jpConfirmedData, setJpConfirmedData] = useState([]);
+  const [jpActiveData, setJpActiveData] = useState([]);
+  const [jpRecoveredData, setJpRecoveredData] = useState([]);
+  const [jpDeathData, setJpDeathData] = useState([]);
 
   // 중국 종합 state
-  const [cnConfirmedData, setCnConfirmedData] = useState();
-  const [cnActiveData, setCnActiveData] = useState();
-  const [cnRecoveredData, setCnRecoveredData] = useState();
-  const [cnDeathData, setCnDeathData] = useState();
+  const [cnConfirmedData, setCnConfirmedData] = useState([]);
+  const [cnActiveData, setCnActiveData] = useState([]);
+  const [cnRecoveredData, setCnRecoveredData] = useState([]);
+  const [cnDeathData, setCnDeathData] = useState([]);
   const url = process.env.REACT_APP_BASE_URL;
 
   useEffect(() => {
