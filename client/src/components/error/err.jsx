@@ -11,7 +11,7 @@ function Err() {
         <br />
         다른 서비스를 이용해 주시기 바랍니다.
         <br />
-        죄송합니다1 🙇‍♂️
+        죄송합니다. 🙇‍♂️
       </p>
       <a
         className={styles.link}

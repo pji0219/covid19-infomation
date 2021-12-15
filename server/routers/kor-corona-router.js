@@ -4,7 +4,7 @@ const request = require('request');
 
 const options = {
   method: 'GET',
-  url: 'https://api.covid19api.com/total/dayone/country/kr'
+  url: 'https://api.covid19api.com/total/dayone/country/kr',
 };
 
 // 국내 코로나 api 라우터
