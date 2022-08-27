@@ -9,9 +9,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "cd server && node index.js",
-    "client": "cd client && yarn start",
+    "client": "cd client && npm start",
     "backend": "cd server && nodemon index.js",
-    "dev": "concurrently \"yarn backend\" \"yarn client\""
+    "dev": "concurrently \"npm run backend\" \"npm run client\""
   },
   "author": "pji",
   "license": "ISC",
