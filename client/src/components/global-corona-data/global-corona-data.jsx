@@ -34,27 +34,27 @@ function GlobalCoronaData() {
   const [cnActiveData, setCnActiveData] = useState([]);
   const [cnRecoveredData, setCnRecoveredData] = useState([]);
   const [cnDeathData, setCnDeathData] = useState([]);
-  const url = process.env.REACT_APP_BASE_URL;
+  // const url = process.env.REACT_APP_BASE_URL;
 
   useEffect(() => {
     // 해외 api
     const fetchGlobal = () => {
-      return axios.get(`${url}/api/global`);
+      return axios.get('https://api.covid19api.com/summary');
     };
 
     // 미국 api
     const fetchUs = () => {
-      return axios.get(`${url}/api/usa`);
+      return axios.get('https://api.covid19api.com/total/dayone/country/us');
     };
 
     // 일본 api
     const fetchJp = () => {
-      return axios.get(`${url}/api/jp`);
+      return axios.get('https://api.covid19api.com/total/dayone/country/jp');
     };
 
     // 중국 api
     const fetchCn = () => {
-      return axios.get(`${url}/api/cn`);
+      return axios.get('https://api.covid19api.com/total/dayone/country/cn');
     };
 
     // 다중 api 호출
@@ -72,7 +72,7 @@ function GlobalCoronaData() {
       });
 
     // 데이터 가공
-    const makeData = (global, us, jp, cn) => {
+    function makeData(global, us, jp, cn) {
       // 세계 종합 현황
       // 숫자 3자리수 마다 ,로 구분
       const globalConfirmed = Number(global.TotalConfirmed).toLocaleString();
@@ -121,7 +121,7 @@ function GlobalCoronaData() {
       setCnActiveData(cnActive);
       setCnRecoveredData(cnRecovered);
       setCnDeathData(cnDeath);
-    };
+    }
   }, []);
 
   return (

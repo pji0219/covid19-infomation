@@ -4,7 +4,6 @@ import styles from './kor-corona-data.module.css';
 import Charts from '../charts/charts';
 import Err from '../error/err';
 import LoadingSpinner from '../loading-spinner/loading-spinner';
-const url = process.env.REACT_APP_BASE_URL;
 
 function KorCoronaData() {
   // 에러 여부 state
@@ -32,18 +31,22 @@ function KorCoronaData() {
   const [monthDeath, setMonthDeath] = useState([]);
 
   useEffect(() => {
-    axios
-      .get(`${url}/api/kor`)
-      .then((res) => {
-        makeData(res.data);
-        setIsLoading(false);
-      })
-      .catch((err) => {
-        setIsNormal(false);
-        console.log('에러 발생! (o_0;)', err);
-      });
+    async function fetchData() {
+      await axios
+        .get('https://api.covid19api.com/total/dayone/country/kr')
+        .then((res) => {
+          makeData(res.data);
+          setIsLoading(false);
+        })
+        .catch((err) => {
+          setIsNormal(false);
+          console.log('에러 발생! (o_0;)', err);
+        });
+    }
 
-    const makeData = (data) => {
+    fetchData();
+
+    function makeData(data) {
       // API로 받은 데이터를 가공 ( 월별 누적 확진자 데이터로 )
       const arr = data.reduce((acc, cur) => {
         // 날짜 형식을 바꿈
@@ -149,7 +152,7 @@ function KorCoronaData() {
           },
         ],
       });
-    };
+    }
   }, []);
 
   return (

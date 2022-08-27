@@ -5,7 +5,6 @@ import News from '../news/news';
 import styles from './news-data.module.css';
 import LoadingSpinner from '../loading-spinner/loading-spinner';
 import Err from '../error/err';
-const url = process.env.REACT_APP_BASE_URL;
 
 function NewsData() {
   const [isNormal, setIsNormal] = useState(true);
@@ -13,19 +12,23 @@ function NewsData() {
   const [news, setNews] = useState([]);
 
   useEffect(() => {
-    axios
-      .get(`${url}/api/navernews`)
-      .then((res) => {
-        makeData(res.data.items);
-        setIsLoading(false);
-      })
-      .catch((err) => {
-        setIsNormal(false);
-        console.log('에러 발생! (o_0;)', err);
-      });
+    async function fetchData() {
+      await axios
+        .get(`${process.env.REACT_APP_SERVER_URL}/api/navernews`)
+        .then((res) => {
+          makeData(res.data.items);
+          setIsLoading(false);
+        })
+        .catch((err) => {
+          setIsNormal(false);
+          console.log('에러 발생! (o_0;)', err);
+        });
+    }
+
+    fetchData();
 
     // 데이터 가공
-    const makeData = (data) => {
+    function makeData(data) {
       const arr = data.reduce((acc, cur) => {
         // 제목의 특정 문자를 다른 것으로 대체
         const removeWord = /[<b>|</b>|&qout|amp|lt|gt;]/g;
@@ -58,7 +61,7 @@ function NewsData() {
       }, []);
 
       setNews(arr);
-    };
+    }
   }, []);
 
   return (
