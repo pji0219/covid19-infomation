@@ -38,7 +38,7 @@ https://know-corona-info.netlify.app/<br>
 
 ## client > src > components > kor-corona-data-kor-corona-data.jsx<br>
 
-axios 라이브러리로 오픈API에서 응답 받은 데이터를 reduce로 가공 시켜 종합 현황 state에 넣어주고 있으며 각종 차트를 제공하기 위해서 reduce로 가공 시킨 데이터를 react-chartjs-2를 이용해서 차트를 만들어주고 있습니다.
+axios 라이브러리로 오픈API에서 응답 받은 데이터를 reduce로 가공 시켜 종합 현황 state에 넣어주고 있으며 reduce로 가공 시킨 데이터를 react-chartjs-2를 이용해서 차트를 렌더링.
 
 ```javascript
 useEffect(() => {
@@ -179,7 +179,7 @@ useEffect(() => {
 
 ## client > src > components > global-corona-data > global-corona-data.jsx<br>
 
-axios 라이브러리로 응답 받은 오픈 API 데이터를 reduce로 가공 시켜 각각 state에 넣어서 화면에 렌더링 시켜주고 있습니다.
+axios 라이브러리로 응답 받은 오픈 API 데이터를 reduce로 가공 시켜 각각 state에 넣어서 화면에 렌더링.
 
 ```javascript
 useEffect(() => {
@@ -283,7 +283,7 @@ useEffect(() => {
 
 ## server > routers > news-router.js
 
-CORS를 해결 하기 위해 서버에서 네이버 뉴스 API를 호출 한 뒤 다시 클라이언트에게 API를 제공 합니다.
+CORS를 해결 하기 위해 서버에서 네이버 뉴스 API를 호출 한 뒤 다시 클라이언트에게 API를 제공.
 
 ```javascript
 const express = require('express');
@@ -316,7 +316,7 @@ module.exports = router;
 
 ## client > src > components > news-data > news-data.jsx
 
-노드 서버에서 호출한 네이버 뉴스 API를 client에서 호출해서 뉴스를 제공 합니다.
+노드 서버에서 호출한 네이버 뉴스 API를 client에서 호출해서 뉴스를 제공.
 
 ```javascript
 import React, { useEffect, useState } from 'react';
